@@ -30,7 +30,7 @@ export default function Contact() {
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
-      alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+      alert('Thank you for your message! We&apos;ll get back to you within 24 hours.');
       setFormData({
         name: '',
         email: '',
@@ -122,7 +122,7 @@ export default function Contact() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
             >
-              Ready to transform your business? Let's discuss your project and create something amazing together.
+              Ready to transform your business? Let&apos;s discuss your project and create something amazing together.
             </motion.p>
           </motion.div>
         </div>
@@ -166,7 +166,7 @@ export default function Contact() {
                 Send Us a Message
               </h2>
               <p className="text-gray-600 mb-8">
-                Fill out the form below and we'll get back to you within 24 hours.
+                Fill out the form below and we&apos;ll get back to you within 24 hours.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -291,7 +291,7 @@ export default function Contact() {
                   Why Choose Smart Move?
                 </h2>
                 <p className="text-gray-600 mb-8">
-                  We're committed to delivering exceptional results and building long-term partnerships with our clients.
+                  We&apos;re committed to delivering exceptional results and building long-term partnerships with our clients.
                 </p>
 
                 <div className="space-y-6">

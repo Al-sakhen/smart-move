@@ -218,7 +218,7 @@ export default function Home() {
               What Our Clients Say
             </h2>
             <p className="text-xl text-gray-600">
-              Don't just take our word for it
+              Don&apos;t just take our word for it
             </p>
           </motion.div>
 
@@ -236,7 +236,7 @@ export default function Home() {
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-600 mb-6 italic">"{testimonial.text}"</p>
+                <p className="text-gray-600 mb-6 italic">&ldquo;{testimonial.text}&rdquo;</p>
                 <div>
                   <div className="font-semibold text-gray-800">{testimonial.name}</div>
                   <div className="text-gray-500">{testimonial.company}</div>
@@ -259,7 +259,7 @@ export default function Home() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-              Let's discuss your project and bring your digital vision to life. 
+              Let&apos;s discuss your project and bring your digital vision to life. 
               Contact us today for a free consultation.
             </p>
             

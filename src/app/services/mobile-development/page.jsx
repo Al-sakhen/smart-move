@@ -276,7 +276,7 @@ export default function MobileDevelopment() {
               Ready to Build Your Mobile App?
             </h2>
             <p className="text-xl text-purple-100 mb-12 max-w-3xl mx-auto">
-              Let's bring your mobile app idea to life and reach millions of users 
+              Let&apos;s bring your mobile app idea to life and reach millions of users 
               across iOS and Android platforms.
             </p>
             

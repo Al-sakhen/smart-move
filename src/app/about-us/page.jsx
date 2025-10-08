@@ -187,7 +187,7 @@ export default function AboutUs() {
                 <p className="text-gray-600 leading-relaxed">
                   Our team combines technical expertise with creative thinking to deliver solutions that 
                   not only meet your current needs but also position your business for future success. 
-                  We're not just a service provider - we're your technology partner.
+                  We&apos;re not just a service provider - we&apos;re your technology partner.
                 </p>
               </div>
             </motion.div>
@@ -364,7 +364,7 @@ export default function AboutUs() {
               Ready to Work Together?
             </h2>
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-              Let's discuss how our team can help transform your business with innovative technology solutions.
+              Let&apos;s discuss how our team can help transform your business with innovative technology solutions.
             </p>
             
             <Link href="/contact">

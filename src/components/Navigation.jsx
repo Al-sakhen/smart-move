@@ -33,7 +33,7 @@ const Navigation = () => {
       ]
     },
     { href: '/projects', label: 'Projects' },
-    { href: '/about', label: 'About Us' },
+    { href: '/about-us', label: 'About Us' },
     { href: '/contact', label: 'Contact' },
   ];
 

@@ -213,7 +213,7 @@ export default function DigitalMarketing() {
               Ready to Grow Your Business?
             </h2>
             <p className="text-xl text-indigo-100 mb-12 max-w-3xl mx-auto">
-              Let's create a digital marketing strategy that drives real results 
+              Let&apos;s create a digital marketing strategy that drives real results 
               and accelerates your business growth.
             </p>
             

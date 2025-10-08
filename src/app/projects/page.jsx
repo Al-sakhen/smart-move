@@ -259,7 +259,7 @@ export default function Projects() {
               Ready to Start Your Project?
             </h2>
             <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
-              Let's create something amazing together. Contact us to discuss your next project.
+              Let&apos;s create something amazing together. Contact us to discuss your next project.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
