@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { Smartphone, CheckCircle, ArrowRight, Users, Zap, Shield, Star, Globe, Code } from 'lucide-react';
 import Link from 'next/link';
-import ThreeBackground from '@/components/ThreeBackground';
 
 export default function MobileDevelopment() {
   const features = [
@@ -90,8 +89,7 @@ export default function MobileDevelopment() {
   ];
 
   return (
-    <div className="min-h-screen">
-      <ThreeBackground />
+    <div className="min-h-screen bg-transparent transition-colors duration-300">
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-20">

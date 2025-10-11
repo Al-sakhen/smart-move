@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { Users, Target, Award, Heart, Lightbulb, Shield, Zap, Globe } from 'lucide-react';
 import Link from 'next/link';
-import ThreeBackground from '@/components/ThreeBackground';
 
 export default function AboutUs() {
   const values = [
@@ -105,9 +104,7 @@ export default function AboutUs() {
   ];
 
   return (
-    <div className="min-h-screen">
-      <ThreeBackground />
-      
+    <div className="min-h-screen bg-transparent transition-colors duration-300">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -135,7 +132,7 @@ export default function AboutUs() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <motion.div
@@ -196,7 +193,7 @@ export default function AboutUs() {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -256,7 +253,7 @@ export default function AboutUs() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -279,7 +276,7 @@ export default function AboutUs() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center border border-gray-100"
               >
                 <div className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 mx-auto mb-6 flex items-center justify-center">
                   <span className="text-4xl font-bold text-white">{member.name.split(' ').map(n => n[0]).join('')}</span>
@@ -304,7 +301,7 @@ export default function AboutUs() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -333,7 +330,7 @@ export default function AboutUs() {
                   className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
                 >
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="bg-white rounded-2xl p-6 shadow-lg">
+                    <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
                       <div className="text-2xl font-bold text-blue-600 mb-2">{milestone.year}</div>
                       <h3 className="text-xl font-bold mb-3 text-gray-800">{milestone.title}</h3>
                       <p className="text-gray-600">{milestone.description}</p>
@@ -353,7 +350,7 @@ export default function AboutUs() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800">
+      <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

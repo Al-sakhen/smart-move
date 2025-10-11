@@ -43,19 +43,22 @@ const Navigation = () => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/90 backdrop-blur-md shadow-lg' 
+          ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-500/30' 
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* Futuristic Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+              whileHover={{ scale: 1.05, textShadow: "0 0 20px rgba(0, 255, 136, 0.8)" }}
+              className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent relative"
             >
-              Smart Move
+              SMART MOVE
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent opacity-50 blur-sm">
+                SMART MOVE
+              </div>
             </motion.div>
           </Link>
 
@@ -66,7 +69,7 @@ const Navigation = () => {
                 {item.hasDropdown ? (
                   <div>
                     <button
-                      className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                      className="flex items-center space-x-1 text-cyan-300 hover:text-cyan-400:text-blue-400 transition-colors duration-200"
                       onMouseEnter={() => setServicesOpen(true)}
                       onMouseLeave={() => setServicesOpen(false)}
                     >
@@ -81,7 +84,7 @@ const Navigation = () => {
                         opacity: servicesOpen ? 1 : 0, 
                         y: servicesOpen ? 0 : 10 
                       }}
-                      className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border ${
+                      className={`absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-xl border border-cyan-500/30 ${
                         servicesOpen ? 'block' : 'hidden'
                       }`}
                       onMouseEnter={() => setServicesOpen(true)}
@@ -92,7 +95,7 @@ const Navigation = () => {
                           <Link
                             key={subItem.label}
                             href={subItem.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                            className="block px-4 py-2 text-sm text-cyan-300 hover:bg-blue-50:bg-gray-700 hover:text-cyan-400:text-blue-400 transition-colors"
                           >
                             {subItem.label}
                           </Link>
@@ -103,7 +106,7 @@ const Navigation = () => {
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-gray-700 hover:text-blue-600 transition-colors duration-200 relative group"
+                    className="text-cyan-300 hover:text-cyan-400:text-blue-400 transition-colors duration-200 relative group"
                   >
                     {item.label}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
@@ -122,10 +125,10 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className="text-cyan-300 hover:text-cyan-400 transition-colors"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -139,14 +142,14 @@ const Navigation = () => {
             opacity: isOpen ? 1 : 0, 
             height: isOpen ? 'auto' : 0 
           }}
-          className="md:hidden overflow-hidden bg-white rounded-lg shadow-lg mt-2"
+          className="md:hidden overflow-hidden bg-slate-800 rounded-lg shadow-lg mt-2"
         >
           <div className="py-2">
             {navItems.map((item) => (
               <div key={item.label}>
                 <Link
                   href={item.href}
-                  className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                  className="block px-4 py-3 text-cyan-300 hover:bg-blue-50 hover:text-cyan-400 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
@@ -155,7 +158,7 @@ const Navigation = () => {
                   <Link
                     key={subItem.label}
                     href={subItem.href}
-                    className="block px-8 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                    className="block px-8 py-2 text-sm text-slate-300 hover:bg-blue-50 hover:text-cyan-400 transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
                     {subItem.label}

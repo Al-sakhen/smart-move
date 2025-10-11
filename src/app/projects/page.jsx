@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import ThreeBackground from '@/components/ThreeBackground';
 
 export default function Projects() {
   const projects = [
@@ -86,8 +85,7 @@ export default function Projects() {
   ];
 
   return (
-    <div className="min-h-screen">
-      <ThreeBackground />
+    <div className="min-h-screen bg-transparent transition-colors duration-300">
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-20">

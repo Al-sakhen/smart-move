@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, Send, MessageCircle, Users, Zap } from 'lucide-react';
 import { useState } from 'react';
-import ThreeBackground from '@/components/ThreeBackground';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -100,8 +99,7 @@ export default function Contact() {
   ];
 
   return (
-    <div className="min-h-screen">
-      <ThreeBackground />
+    <div className="min-h-screen bg-transparent transition-colors duration-300">
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-20">

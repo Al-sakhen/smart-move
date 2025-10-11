@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { TrendingUp, CheckCircle, ArrowRight, Target, Users, BarChart, Globe, Search, MessageSquare } from 'lucide-react';
 import Link from 'next/link';
-import ThreeBackground from '@/components/ThreeBackground';
 
 export default function DigitalMarketing() {
   const features = [
@@ -63,8 +62,7 @@ export default function DigitalMarketing() {
   ];
 
   return (
-    <div className="min-h-screen">
-      <ThreeBackground />
+    <div className="min-h-screen bg-transparent transition-colors duration-300">
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-20">

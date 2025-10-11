@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { Code, Smartphone, Briefcase, Palette, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
-import ThreeBackground from '@/components/ThreeBackground';
 
 export default function Services() {
   const services = [
@@ -83,8 +82,7 @@ export default function Services() {
   ];
 
   return (
-    <div className="min-h-screen">
-      <ThreeBackground />
+    <div className="min-h-screen bg-transparent transition-colors duration-300">
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-20">
