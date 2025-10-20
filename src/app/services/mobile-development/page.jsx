@@ -138,8 +138,9 @@ export default function MobileDevelopment() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300"
+                  aria-label="View our mobile app development portfolio and published apps"
                 >
-                  View Our Apps
+                  View Our Mobile App Portfolio
                 </motion.button>
               </Link>
             </motion.div>
@@ -295,8 +296,9 @@ export default function MobileDevelopment() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
+                  aria-label="View all IT services offered by Smart Move"
                 >
-                  View All Services
+                  Explore All Our IT Services
                 </motion.button>
               </Link>
             </div>

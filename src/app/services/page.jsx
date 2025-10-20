@@ -160,6 +160,7 @@ export default function Services() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className={`w-full bg-gradient-to-r ${service.gradient} text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-shadow duration-300 flex items-center justify-center space-x-2`}
+                    aria-label={`Learn more about our ${service.title} services`}
                   >
                     <span>Learn More</span>
                     <ArrowRight className="w-5 h-5" />

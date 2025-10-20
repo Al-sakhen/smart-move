@@ -145,8 +145,9 @@ export default function WebDevelopment() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="border-2 border-[#167dc1] text-[#167dc1] px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#167dc1] hover:text-white transition-all duration-300"
+                  aria-label="View our web development portfolio and completed projects"
                 >
-                  View Our Work
+                  View Our Web Development Portfolio
                 </motion.button>
               </Link>
             </motion.div>
@@ -337,8 +338,9 @@ export default function WebDevelopment() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-[#167dc1] transition-all duration-300"
+                  aria-label="View all IT services offered by Smart Move"
                 >
-                  View All Services
+                  Explore All Our IT Services
                 </motion.button>
               </Link>
             </div>

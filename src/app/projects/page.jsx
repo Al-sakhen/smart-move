@@ -249,8 +249,9 @@ export default function Projects() {
                     <motion.button
                       whileHover={{ x: 5 }}
                       className="text-[#167dc1] font-semibold flex items-center space-x-2 hover:text-[#125a91]"
+                      aria-label={`Learn more about ${project.title} project details`}
                     >
-                      <span>Learn More</span>
+                      <span>View Project Details</span>
                       <ArrowRight className="w-4 h-4" />
                     </motion.button>
                   </div>
@@ -293,8 +294,9 @@ export default function Projects() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-[#167dc1] transition-all duration-300"
+                  aria-label="View all IT services offered by Smart Move"
                 >
-                  View Our Services
+                  Explore Our IT Services
                 </motion.button>
               </Link>
             </div>

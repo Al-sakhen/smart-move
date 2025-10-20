@@ -463,8 +463,9 @@ export default function Home() {
                   whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -3px rgba(59, 130, 246, 0.2)" }}
                   whileTap={{ scale: 0.95 }}
                   className="relative border-2 border-[#167dc1] text-[#167dc1] px-10 py-4 rounded-full text-lg font-semibold hover:bg-[#167dc1] hover:text-white transition-all duration-300"
+                  aria-label="View our portfolio of completed projects"
                 >
-                  <span className="relative z-10">VIEW PROJECTS</span>
+                  <span className="relative z-10">VIEW OUR PROJECTS</span>
                 </motion.button>
               </Link>
             </motion.div>
@@ -510,8 +511,9 @@ export default function Home() {
                   <motion.button
                     whileHover={{ x: 5 }}
                     className="text-[#167dc1] font-semibold flex items-center space-x-2 hover:text-[#125a91] transition-colors relative z-10"
+                    aria-label={`Learn more about our ${service.title} services`}
                   >
-                    <span>Learn More</span>
+                    <span>Learn More About {service.title}</span>
                     <ArrowRight className="w-4 h-4" />
                   </motion.button>
                 </Link>
