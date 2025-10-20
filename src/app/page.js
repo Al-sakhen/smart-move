@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Code, Smartphone, Briefcase, Palette, TrendingUp, Star, Users, Trophy, Clock } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Head from 'next/head';
 
 export default function Home() {
   const services = [
@@ -69,6 +70,308 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white transition-colors duration-300">
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Organization",
+                "@id": "https://smartmove.jo/#organization",
+                "name": "Smart Move",
+                "alternateName": "سمارت موف",
+                "url": "https://smartmove.jo",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://smartmove.jo/smart-move-logo.svg",
+                  "width": 400,
+                  "height": 400
+                },
+                "description": "Leading IT solutions company in Jordan providing web development, mobile applications, business solutions, digital marketing, and SEO services.",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Amman",
+                  "addressRegion": "Amman Governorate",
+                  "addressCountry": "Jordan"
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": 31.9539,
+                  "longitude": 35.9106
+                },
+                "sameAs": [
+                  "https://www.facebook.com/smartmovejo",
+                  "https://www.linkedin.com/company/smartmove-jo",
+                  "https://twitter.com/smartmove_jo",
+                  "https://www.instagram.com/smartmove.jo"
+                ],
+                "areaServed": [
+                  {
+                    "@type": "Country",
+                    "name": "Jordan"
+                  },
+                  {
+                    "@type": "Place",
+                    "name": "Middle East"
+                  },
+                  {
+                    "@type": "Place", 
+                    "name": "MENA Region"
+                  }
+                ],
+                "knowsAbout": [
+                  "Web Development",
+                  "Mobile App Development", 
+                  "Business Solutions",
+                  "Digital Marketing",
+                  "SEO Services",
+                  "Social Media Marketing",
+                  "E-commerce Development",
+                  "UI/UX Design",
+                  "Software Development",
+                  "تطوير المواقع",
+                  "تطوير التطبيقات",
+                  "التسويق الرقمي",
+                  "خدمات السيو"
+                ]
+              },
+              {
+                "@type": "WebSite",
+                "@id": "https://smartmove.jo/#website",
+                "url": "https://smartmove.jo",
+                "name": "Smart Move - IT Solutions Company Jordan",
+                "description": "Professional IT solutions including web development, mobile apps, business automation, digital marketing, and SEO services in Jordan",
+                "publisher": {
+                  "@id": "https://smartmove.jo/#organization"
+                },
+                "inLanguage": ["en-US", "ar-JO"],
+                "potentialAction": [
+                  {
+                    "@type": "SearchAction",
+                    "target": {
+                      "@type": "EntryPoint",
+                      "urlTemplate": "https://smartmove.jo/search?q={search_term_string}"
+                    },
+                    "query-input": "required name=search_term_string"
+                  }
+                ]
+              },
+              {
+                "@type": "WebPage",
+                "@id": "https://smartmove.jo/#webpage",
+                "url": "https://smartmove.jo",
+                "name": "Smart Move - Professional IT Solutions & Digital Services Jordan",
+                "isPartOf": {
+                  "@id": "https://smartmove.jo/#website"
+                },
+                "about": {
+                  "@id": "https://smartmove.jo/#organization"
+                },
+                "description": "Smart Move is Jordan's leading IT solutions company specializing in web development, mobile applications, business automation, digital marketing, SEO, and comprehensive technology services for businesses across the Middle East.",
+                "breadcrumb": {
+                  "@id": "https://smartmove.jo/#breadcrumb"
+                },
+                "inLanguage": ["en-US", "ar-JO"],
+                "potentialAction": [
+                  {
+                    "@type": "ReadAction",
+                    "target": ["https://smartmove.jo"]
+                  }
+                ]
+              },
+              {
+                "@type": "BreadcrumbList",
+                "@id": "https://smartmove.jo/#breadcrumb",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://smartmove.jo"
+                  }
+                ]
+              },
+              {
+                "@type": "Service",
+                "serviceType": "Web Development",
+                "name": "تطوير المواقع الإلكترونية",
+                "description": "Professional web development services using modern technologies like React, Next.js, and Node.js",
+                "provider": {
+                  "@id": "https://smartmove.jo/#organization"
+                },
+                "areaServed": "Jordan",
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": "Web Development Services",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Responsive Website Development"
+                      }
+                    },
+                    {
+                      "@type": "Offer", 
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "E-commerce Development"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service", 
+                        "name": "Custom Web Applications"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "Service",
+                "serviceType": "Mobile App Development", 
+                "name": "تطوير تطبيقات الهاتف المحمول",
+                "description": "Native and cross-platform mobile application development for iOS and Android",
+                "provider": {
+                  "@id": "https://smartmove.jo/#organization"
+                },
+                "areaServed": "Jordan"
+              },
+              {
+                "@type": "Service",
+                "serviceType": "Digital Marketing",
+                "name": "التسويق الرقمي وخدمات السيو", 
+                "description": "Comprehensive digital marketing services including SEO, social media marketing, and online advertising",
+                "provider": {
+                  "@id": "https://smartmove.jo/#organization"
+                },
+                "areaServed": "Jordan"
+              },
+              {
+                "@type": "Service",
+                "serviceType": "Business Solutions",
+                "name": "الحلول التجارية والأتمتة",
+                "description": "Custom business automation systems and enterprise software solutions",
+                "provider": {
+                  "@id": "https://smartmove.jo/#organization"
+                },
+                "areaServed": "Jordan"
+              },
+              {
+                "@type": "LocalBusiness",
+                "@id": "https://smartmove.jo/#localbusiness",
+                "name": "Smart Move Jordan",
+                "image": "https://smartmove.jo/smart-move-logo.svg",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Amman",
+                  "addressRegion": "Amman Governorate", 
+                  "addressCountry": "JO"
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": 31.9539,
+                  "longitude": 35.9106
+                },
+                "url": "https://smartmove.jo",
+                "telephone": "+962-XX-XXX-XXXX",
+                "priceRange": "$$",
+                "openingHoursSpecification": [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                      "Monday",
+                      "Tuesday", 
+                      "Wednesday",
+                      "Thursday",
+                      "Sunday"
+                    ],
+                    "opens": "09:00",
+                    "closes": "18:00"
+                  }
+                ],
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.9",
+                  "reviewCount": "150",
+                  "bestRating": "5"
+                }
+              }
+            ]
+          })
+        }}
+      />
+      
+      {/* Additional SEO Meta Tags */}
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English, Arabic" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="distribution" content="web" />
+        <meta name="rating" content="general" />
+        <meta name="subject" content="IT Solutions, Web Development, Mobile Apps, Digital Marketing, Jordan" />
+        <meta name="copyright" content="Smart Move Jordan" />
+        <meta name="abstract" content="Smart Move is a leading IT solutions company in Jordan providing comprehensive technology services including web development, mobile applications, business automation, digital marketing, SEO, and innovative software solutions." />
+        <meta name="topic" content="Technology Services" />
+        <meta name="summary" content="Professional IT solutions and digital services in Jordan including web development, mobile apps, business automation, and digital marketing." />
+        <meta name="classification" content="Business Services" />
+        <meta name="designer" content="Smart Move Design Team" />
+        <meta name="reply-to" content="info@smartmove.jo" />
+        <meta name="owner" content="Smart Move Jordan" />
+        <meta name="url" content="https://smartmove.jo" />
+        <meta name="identifier-URL" content="https://smartmove.jo" />
+        <meta name="directory" content="submission" />
+        <meta name="category" content="IT Services, Technology, Software Development" />
+        <meta name="coverage" content="Jordan, Middle East, MENA" />
+        <meta name="distribution" content="Global" />
+        <meta name="rating" content="General" />
+        <meta name="contactPoint" content="Amman, Jordan" />
+        
+        {/* Arabic Meta Tags */}
+        <meta name="description" lang="ar" content="شركة سمارت موف الرائدة في الحلول التقنية في الأردن. نقدم خدمات تطوير المواقع، تطبيقات الهاتف، الحلول التجارية، التسويق الرقمي، والسيو" />
+        <meta name="keywords" lang="ar" content="تطوير المواقع, تطبيقات الهاتف, التسويق الرقمي, السيو, الحلول التجارية, شركة برمجة الأردن, تصميم مواقع عمان" />
+        
+        {/* Rich Snippets */}
+        <meta property="business:contact_data:street_address" content="Amman, Jordan" />
+        <meta property="business:contact_data:locality" content="Amman" />
+        <meta property="business:contact_data:region" content="Jordan" />
+        <meta property="business:contact_data:postal_code" content="11181" />
+        <meta property="business:contact_data:country_name" content="Jordan" />
+        
+        {/* Additional OpenGraph */}
+        <meta property="og:street-address" content="Amman" />
+        <meta property="og:locality" content="Amman" />
+        <meta property="og:region" content="Jordan" />
+        <meta property="og:postal-code" content="11181" />
+        <meta property="og:country-name" content="Jordan" />
+        <meta property="og:email" content="info@smartmove.jo" />
+        <meta property="og:phone_number" content="+962-XX-XXX-XXXX" />
+        <meta property="og:latitude" content="31.9539" />
+        <meta property="og:longitude" content="35.9106" />
+        
+        {/* Twitter Card Additional */}
+        <meta name="twitter:label1" content="Services" />
+        <meta name="twitter:data1" content="Web Development, Mobile Apps, Digital Marketing" />
+        <meta name="twitter:label2" content="Location" />
+        <meta name="twitter:data2" content="Amman, Jordan" />
+        
+        {/* Alternate Languages */}
+        <link rel="alternate" hrefLang="en" href="https://smartmove.jo/en" />
+        <link rel="alternate" hrefLang="ar" href="https://smartmove.jo/ar" />
+        <link rel="alternate" hrefLang="x-default" href="https://smartmove.jo" />
+        
+        {/* Canonical */}
+        <link rel="canonical" href="https://smartmove.jo" />
+        
+        {/* Preconnect for Performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </Head>
+      
       {/* Modern Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden tech-bg-animated floating-elements pt-20 sm:pt-16">
         <div className="absolute inset-0 tech-grid-bg opacity-60"></div>
