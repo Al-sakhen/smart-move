@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, Send, MessageCircle, Users, Zap } from 'lucide-react';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -46,7 +47,7 @@ export default function Contact() {
       title: 'Email Us',
       content: 'info@smartmove.com',
       description: 'Send us an email anytime',
-      gradient: 'from-blue-500 to-cyan-500'
+      gradient: 'from-[#167dc1] to-cyan-500'
     },
     {
       icon: Phone,
@@ -99,18 +100,19 @@ export default function Contact() {
   ];
 
   return (
-    <div className="min-h-screen bg-transparent transition-colors duration-300">
+    <div className="min-h-screen bg-white transition-colors duration-300">
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative min-h-screen flex items-center justify-center pt-20 tech-bg-animated floating-elements">
+        <div className="absolute inset-0 tech-grid-bg opacity-30"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#167dc1] to-[#0f4a7a] bg-clip-text text-transparent">
                 Contact Us
               </span>
             </h1>
@@ -127,8 +129,9 @@ export default function Contact() {
       </section>
 
       {/* Contact Info Cards */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gray-50 relative">
+        <div className="absolute inset-0 circuit-pattern opacity-40"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactInfo.map((info, index) => (
               <motion.div
@@ -142,7 +145,7 @@ export default function Contact() {
                   <info.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-gray-800">{info.title}</h3>
-                <p className="text-lg font-semibold text-blue-600 mb-2">{info.content}</p>
+                <p className="text-lg font-semibold text-[#167dc1] mb-2">{info.content}</p>
                 <p className="text-gray-600 text-sm">{info.description}</p>
               </motion.div>
             ))}
@@ -160,7 +163,7 @@ export default function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-[#167dc1] to-purple-600 bg-clip-text text-transparent">
                 Send Us a Message
               </h2>
               <p className="text-gray-600 mb-8">
@@ -180,7 +183,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#167dc1] focus:border-transparent transition-colors"
                       placeholder="Your full name"
                     />
                   </div>
@@ -196,7 +199,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#167dc1] focus:border-transparent transition-colors"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -213,7 +216,7 @@ export default function Contact() {
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#167dc1] focus:border-transparent transition-colors"
                       placeholder="Your company name"
                     />
                   </div>
@@ -227,7 +230,7 @@ export default function Contact() {
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#167dc1] focus:border-transparent transition-colors"
                     >
                       <option value="">Select a service</option>
                       {services.map((service) => (
@@ -250,7 +253,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#167dc1] focus:border-transparent transition-colors resize-none"
                     placeholder="Tell us about your project and requirements..."
                   />
                 </div>
@@ -260,7 +263,7 @@ export default function Contact() {
                   disabled={isSubmitting}
                   whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
                   whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-shadow duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-gradient-to-r from-[#167dc1] to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-shadow duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>
@@ -301,7 +304,7 @@ export default function Contact() {
                       transition={{ duration: 0.6, delay: index * 0.1 }}
                       className="flex items-start space-x-4"
                     >
-                      <div className="bg-gradient-to-r from-blue-600 to-purple-600 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="bg-gradient-to-r from-[#167dc1] to-purple-600 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                         <feature.icon className="w-6 h-6 text-white" />
                       </div>
                       <div>
@@ -360,10 +363,19 @@ export default function Contact() {
             className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl p-8 h-96 flex items-center justify-center"
           >
             <div className="text-center">
-              <MapPin className="w-16 h-16 text-blue-600 mx-auto mb-4" />
+              <div className="flex items-center justify-center mb-4">
+                <Image
+                  src="/smart-move-logo.svg"
+                  alt="Smart Move Logo"
+                  width={64}
+                  height={64}
+                  className="w-16 h-16 mr-3"
+                />
+                <MapPin className="w-16 h-16 text-[#167dc1]" />
+              </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-2">Smart Move Headquarters</h3>
-              <p className="text-gray-600">123 Business Street, Tech City, TC 12345</p>
-              <p className="text-gray-600">United States</p>
+              <p className="text-gray-600">Amman, Jordan</p>
+              <p className="text-gray-600">Middle East & North Africa</p>
             </div>
           </motion.div>
         </div>

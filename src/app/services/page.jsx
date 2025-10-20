@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Code, Smartphone, Briefcase, Palette, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Services() {
   const services = [
@@ -11,7 +12,7 @@ export default function Services() {
       title: 'Web Development',
       description: 'Create modern, responsive websites that engage your audience and drive business growth.',
       features: ['React & Next.js', 'E-commerce Solutions', 'CMS Development', 'API Integration'],
-      gradient: 'from-blue-500 to-cyan-500',
+      gradient: 'from-[#167dc1] to-cyan-500',
       href: '/services/web-development'
     },
     {
@@ -82,21 +83,36 @@ export default function Services() {
   ];
 
   return (
-    <div className="min-h-screen bg-transparent transition-colors duration-300">
+    <div className="min-h-screen bg-white transition-colors duration-300">
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative min-h-screen flex items-center justify-center pt-20 tech-bg-animated floating-elements">
+        <div className="absolute inset-0 tech-grid-bg opacity-30"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Our Services
-              </span>
-            </h1>
+            <div className="flex flex-col items-center mb-8">
+              <motion.div
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                className="mb-6"
+              >
+                <Image
+                  src="/smart-move-logo.svg"
+                  alt="Smart Move Logo"
+                  width={80}
+                  height={80}
+                  className="w-20 h-20"
+                />
+              </motion.div>
+              <h1 className="text-5xl md:text-7xl font-bold">
+                <span className="bg-gradient-to-r from-[#167dc1] to-[#0f4a7a] bg-clip-text text-transparent">
+                  Our Services
+                </span>
+              </h1>
+            </div>
             <motion.p
               className="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto"
               initial={{ opacity: 0 }}
@@ -111,8 +127,9 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gray-50 relative">
+        <div className="absolute inset-0 circuit-pattern opacity-40"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {services.map((service, index) => (
               <motion.div
@@ -181,11 +198,11 @@ export default function Services() {
                 className="text-center"
               >
                 <div className="relative mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#167dc1] to-purple-600 rounded-full flex items-center justify-center mx-auto">
                     <span className="text-2xl font-bold text-white">{step.step}</span>
                   </div>
                   {index < process.length - 1 && (
-                    <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 opacity-30"></div>
+                    <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-[#167dc1] to-purple-600 opacity-30"></div>
                   )}
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-gray-800">{step.title}</h3>
@@ -197,7 +214,7 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="py-20 bg-gradient-to-r from-[#167dc1] to-purple-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -215,7 +232,7 @@ export default function Services() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-blue-600 px-12 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-shadow duration-300 inline-flex items-center space-x-2"
+                className="bg-white text-[#167dc1] px-12 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-shadow duration-300 inline-flex items-center space-x-2"
               >
                 <span>Get Free Consultation</span>
                 <ArrowRight className="w-5 h-5" />

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Users, Target, Award, Heart, Lightbulb, Shield, Zap, Globe } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function AboutUs() {
   const values = [
@@ -16,7 +17,7 @@ export default function AboutUs() {
       icon: Shield,
       title: 'Quality',
       description: 'We maintain the highest standards in our work, ensuring every project meets and exceeds expectations.',
-      gradient: 'from-blue-500 to-indigo-600'
+      gradient: 'from-[#167dc1] to-indigo-600'
     },
     {
       icon: Heart,
@@ -104,20 +105,36 @@ export default function AboutUs() {
   ];
 
   return (
-    <div className="min-h-screen bg-transparent transition-colors duration-300">
+    <div className="min-h-screen bg-white transition-colors duration-300">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative min-h-screen flex items-center justify-center pt-20 tech-bg-animated floating-elements">
+        <div className="absolute inset-0 tech-grid-bg opacity-60"></div>
+        <div className="absolute inset-0 tech-lines opacity-30"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                About Us
-              </span>
-            </h1>
+            <div className="flex flex-col items-center mb-8">
+              <motion.div
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                className="mb-6"
+              >
+                <Image
+                  src="/smart-move-logo.svg"
+                  alt="Smart Move Logo"
+                  width={80}
+                  height={80}
+                  className="w-20 h-20"
+                />
+              </motion.div>
+              <h1 className="text-5xl md:text-7xl font-bold">
+                <span className="bg-gradient-to-r from-[#167dc1] to-[#0f4a7a] bg-clip-text text-transparent">
+                  About Us
+                </span>
+              </h1>
+            </div>
             <motion.p
               className="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto"
               initial={{ opacity: 0 }}
@@ -132,8 +149,10 @@ export default function AboutUs() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-white transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gray-50 transition-colors duration-300 relative">
+        <div className="absolute inset-0 circuit-pattern opacity-70"></div>
+        <div className="absolute inset-0 hex-pattern opacity-40"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -142,7 +161,7 @@ export default function AboutUs() {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-[#167dc1] to-purple-600 bg-clip-text text-transparent">
                   Our Mission
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
@@ -193,15 +212,16 @@ export default function AboutUs() {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-gray-50 transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-white transition-colors duration-300 relative decorative-shapes">
+        <div className="absolute inset-0 geometric-pattern opacity-50"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#167dc1] to-[#0f4a7a] bg-clip-text text-transparent">
               Our Values
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -230,7 +250,7 @@ export default function AboutUs() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="py-20 bg-gradient-to-r from-[#167dc1] to-[#125a91]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -253,8 +273,9 @@ export default function AboutUs() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-white transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gray-50 transition-colors duration-300 relative">
+        <div className="absolute inset-0 data-viz-bg"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -282,13 +303,13 @@ export default function AboutUs() {
                   <span className="text-4xl font-bold text-white">{member.name.split(' ').map(n => n[0]).join('')}</span>
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-gray-800">{member.name}</h3>
-                <p className="text-blue-600 font-semibold mb-4">{member.role}</p>
+                <p className="text-[#167dc1] font-semibold mb-4">{member.role}</p>
                 <p className="text-gray-600 text-sm mb-4">{member.bio}</p>
                 <div className="flex flex-wrap gap-2 justify-center">
                   {member.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs"
+                      className="px-3 py-1 bg-blue-100 text-[#167dc1] rounded-full text-xs"
                     >
                       {skill}
                     </span>
@@ -318,7 +339,7 @@ export default function AboutUs() {
           </motion.div>
 
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-600 to-purple-600 rounded-full"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#167dc1] to-purple-600 rounded-full"></div>
             
             <div className="space-y-12">
               {milestones.map((milestone, index) => (
@@ -331,14 +352,14 @@ export default function AboutUs() {
                 >
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
                     <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                      <div className="text-2xl font-bold text-blue-600 mb-2">{milestone.year}</div>
+                      <div className="text-2xl font-bold text-[#167dc1] mb-2">{milestone.year}</div>
                       <h3 className="text-xl font-bold mb-3 text-gray-800">{milestone.title}</h3>
                       <p className="text-gray-600">{milestone.description}</p>
                     </div>
                   </div>
                   
                   <div className="relative z-10">
-                    <div className="w-4 h-4 bg-white border-4 border-blue-600 rounded-full"></div>
+                    <div className="w-4 h-4 bg-white border-4 border-[#167dc1] rounded-full"></div>
                   </div>
                   
                   <div className="w-1/2"></div>
@@ -368,7 +389,7 @@ export default function AboutUs() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-shadow duration-300"
+                className="bg-gradient-to-r from-[#167dc1] to-purple-600 text-white px-12 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-shadow duration-300"
               >
                 Get In Touch
               </motion.button>

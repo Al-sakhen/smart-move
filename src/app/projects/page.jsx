@@ -16,7 +16,7 @@ export default function Projects() {
       technologies: ['Next.js', 'React', 'Stripe', 'MongoDB', 'Tailwind CSS'],
       liveUrl: '#',
       githubUrl: '#',
-      gradient: 'from-blue-500 to-cyan-500'
+      gradient: 'from-[#167dc1] to-cyan-500'
     },
     {
       id: 2,
@@ -71,7 +71,7 @@ export default function Projects() {
       technologies: ['React', 'Node.js', 'WebRTC', 'AWS', 'HIPAA Compliance'],
       liveUrl: '#',
       githubUrl: '#',
-      gradient: 'from-teal-500 to-blue-500'
+      gradient: 'from-teal-500 to-[#167dc1]'
     }
   ];
 
@@ -85,21 +85,36 @@ export default function Projects() {
   ];
 
   return (
-    <div className="min-h-screen bg-transparent transition-colors duration-300">
+    <div className="min-h-screen bg-white transition-colors duration-300">
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative min-h-screen flex items-center justify-center pt-20 tech-bg-animated floating-elements">
+        <div className="absolute inset-0 tech-grid-bg opacity-30"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Our Projects
-              </span>
-            </h1>
+            <div className="flex flex-col items-center mb-8">
+              <motion.div
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                className="mb-6"
+              >
+                <Image
+                  src="/smart-move-logo.svg"
+                  alt="Smart Move Logo"
+                  width={80}
+                  height={80}
+                  className="w-20 h-20"
+                />
+              </motion.div>
+              <h1 className="text-5xl md:text-7xl font-bold">
+                <span className="bg-gradient-to-r from-[#167dc1] to-[#0f4a7a] bg-clip-text text-transparent">
+                  Our Projects
+                </span>
+              </h1>
+            </div>
             <motion.p
               className="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto"
               initial={{ opacity: 0 }}
@@ -114,8 +129,9 @@ export default function Projects() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gray-50 relative">
+        <div className="absolute inset-0 data-viz-bg"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
@@ -125,7 +141,7 @@ export default function Projects() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#167dc1] to-purple-600 bg-clip-text text-transparent mb-2">
                   {stat.number}
                 </div>
                 <div className="text-gray-600 text-lg">{stat.label}</div>
@@ -162,7 +178,7 @@ export default function Projects() {
             {categories.map((category) => (
               <button
                 key={category}
-                className="px-6 py-3 rounded-full bg-white text-gray-600 hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-md hover:shadow-lg"
+                className="px-6 py-3 rounded-full bg-white text-gray-600 hover:bg-[#167dc1] hover:text-white transition-all duration-300 shadow-md hover:shadow-lg"
               >
                 {category}
               </button>
@@ -216,7 +232,7 @@ export default function Projects() {
                     <div className="flex space-x-4">
                       <a
                         href={project.liveUrl}
-                        className="text-blue-600 hover:text-blue-700 transition-colors"
+                        className="text-[#167dc1] hover:text-[#125a91] transition-colors"
                         aria-label="View live project"
                       >
                         <ExternalLink className="w-5 h-5" />
@@ -232,7 +248,7 @@ export default function Projects() {
                     
                     <motion.button
                       whileHover={{ x: 5 }}
-                      className="text-blue-600 font-semibold flex items-center space-x-2 hover:text-blue-700"
+                      className="text-[#167dc1] font-semibold flex items-center space-x-2 hover:text-[#125a91]"
                     >
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4" />
@@ -246,7 +262,7 @@ export default function Projects() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="py-20 bg-gradient-to-r from-[#167dc1] to-purple-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -265,7 +281,7 @@ export default function Projects() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-shadow duration-300 inline-flex items-center space-x-2"
+                  className="bg-white text-[#167dc1] px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-shadow duration-300 inline-flex items-center space-x-2"
                 >
                   <span>Start Your Project</span>
                   <ArrowRight className="w-5 h-5" />
@@ -276,7 +292,7 @@ export default function Projects() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
+                  className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-[#167dc1] transition-all duration-300"
                 >
                   View Our Services
                 </motion.button>

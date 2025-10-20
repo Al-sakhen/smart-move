@@ -44,8 +44,8 @@ export default function WebDevelopment() {
     { name: 'Vue.js', color: 'from-green-400 to-emerald-500' },
     { name: 'Angular', color: 'from-red-500 to-pink-500' },
     { name: 'Node.js', color: 'from-green-600 to-lime-500' },
-    { name: 'TypeScript', color: 'from-blue-600 to-indigo-600' },
-    { name: 'Tailwind CSS', color: 'from-cyan-400 to-blue-500' },
+    { name: 'TypeScript', color: 'from-[#167dc1] to-indigo-600' },
+    { name: 'Tailwind CSS', color: 'from-cyan-400 to-[#167dc1]' },
     { name: 'MongoDB', color: 'from-green-500 to-green-700' }
   ];
 
@@ -106,11 +106,11 @@ export default function WebDevelopment() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <div className="w-20 h-20 rounded-3xl bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mx-auto mb-8">
+            <div className="w-20 h-20 rounded-3xl bg-gradient-to-r from-[#167dc1] to-cyan-500 flex items-center justify-center mx-auto mb-8">
               <Code className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#167dc1] to-cyan-600 bg-clip-text text-transparent">
                 Web Development
               </span>
             </h1>
@@ -134,7 +134,7 @@ export default function WebDevelopment() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-shadow duration-300 flex items-center justify-center space-x-2"
+                  className="bg-gradient-to-r from-[#167dc1] to-cyan-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-shadow duration-300 flex items-center justify-center space-x-2"
                 >
                   <span>Start Your Project</span>
                   <ArrowRight className="w-5 h-5" />
@@ -144,7 +144,7 @@ export default function WebDevelopment() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300"
+                  className="border-2 border-[#167dc1] text-[#167dc1] px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#167dc1] hover:text-white transition-all duration-300"
                 >
                   View Our Work
                 </motion.button>
@@ -180,7 +180,7 @@ export default function WebDevelopment() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center p-6"
               >
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-[#167dc1] to-cyan-500 flex items-center justify-center mx-auto mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-gray-800">{feature.title}</h3>
@@ -293,7 +293,7 @@ export default function WebDevelopment() {
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#167dc1] to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl font-bold text-white">{step.step}</span>
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-gray-800">{step.title}</h3>
@@ -305,7 +305,7 @@ export default function WebDevelopment() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
+      <section className="py-20 bg-gradient-to-r from-[#167dc1] to-cyan-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -325,7 +325,7 @@ export default function WebDevelopment() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-shadow duration-300 inline-flex items-center space-x-2"
+                  className="bg-white text-[#167dc1] px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-shadow duration-300 inline-flex items-center space-x-2"
                 >
                   <span>Get Free Quote</span>
                   <ArrowRight className="w-5 h-5" />
@@ -336,7 +336,7 @@ export default function WebDevelopment() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
+                  className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-[#167dc1] transition-all duration-300"
                 >
                   View All Services
                 </motion.button>

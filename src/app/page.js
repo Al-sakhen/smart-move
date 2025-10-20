@@ -3,38 +3,39 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Code, Smartphone, Briefcase, Palette, TrendingUp, Star, Users, Trophy, Clock } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   const services = [
     {
       icon: Code,
-      title: 'Quantum Web Development',
-      description: 'AI-powered websites with neural interfaces and quantum processing capabilities',
-      gradient: 'from-cyan-500 to-blue-600'
+      title: 'Web Development',
+      description: 'Modern, responsive websites and web applications built with cutting-edge technologies',
+      gradient: 'from-[#167dc1] to-[#125a91]'
     },
     {
       icon: Smartphone,
-      title: 'Holographic Mobile Apps',
-      description: 'Next-gen AR/VR mobile applications with brain-computer interfaces',
-      gradient: 'from-purple-500 to-pink-600'
+      title: 'Mobile Development',
+      description: 'Native and cross-platform mobile applications for iOS and Android',
+      gradient: 'from-[#125a91] to-[#0f4a7a]'
     },
     {
       icon: Briefcase,
-      title: 'AI Business Automation',
-      description: 'Autonomous business systems powered by advanced machine learning',
-      gradient: 'from-green-500 to-emerald-600'
+      title: 'Business Solutions',
+      description: 'Custom business automation and management systems to streamline operations',
+      gradient: 'from-[#0f4a7a] to-[#0d3d64]'
     },
     {
       icon: Palette,
-      title: 'Neural Design Systems',
-      description: 'AI-generated interfaces that adapt to user consciousness and emotions',
-      gradient: 'from-orange-500 to-red-600'
+      title: 'Design Services',
+      description: 'Beautiful, user-centered designs that enhance user experience and engagement',
+      gradient: 'from-indigo-500 to-[#167dc1]'
     },
     {
       icon: TrendingUp,
-      title: 'Quantum Marketing',
-      description: 'Predictive marketing using quantum algorithms and consciousness mapping',
-      gradient: 'from-indigo-500 to-purple-600'
+      title: 'Digital Marketing',
+      description: 'Strategic digital marketing solutions to grow your online presence and reach',
+      gradient: 'from-[#167dc1] to-indigo-600'
     }
   ];
 
@@ -67,64 +68,78 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-transparent transition-colors duration-300">
-      {/* Futuristic Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div className="min-h-screen bg-white transition-colors duration-300">
+      {/* Modern Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden tech-bg-animated floating-elements">
+        <div className="absolute inset-0 tech-grid-bg opacity-60"></div>
+        <div className="absolute inset-0 tech-lines opacity-30"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            {/* Holographic company name */}
-            <motion.h1 
-              className="text-6xl md:text-8xl font-bold mb-6 relative"
+            {/* Logo and Company name */}
+            <motion.div
+              className="flex flex-col items-center mb-8"
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.5, type: "spring" }}
             >
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent filter drop-shadow-2xl">
-                SMART MOVE
-              </span>
-              <motion.div 
-                className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent opacity-50 blur-sm"
-                animate={{ opacity: [0.3, 0.7, 0.3] }}
-                transition={{ duration: 2, repeat: Infinity }}
+              <motion.div
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                className="mb-6"
               >
-                SMART MOVE
+                <Image
+                  src="/smart-move-logo.svg"
+                  alt="Smart Move Logo"
+                  width={120}
+                  height={120}
+                  className="w-24 h-24 md:w-30 md:h-30"
+                />
               </motion.div>
-            </motion.h1>
+              <motion.h1 
+                className="text-6xl md:text-8xl font-bold relative"
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1.5, type: "spring", delay: 0.2 }}
+              >
+                <span className="bg-gradient-to-r from-[#167dc1] via-[#125a91] to-[#0f4a7a] bg-clip-text text-transparent filter drop-shadow-sm">
+                  SMART MOVE
+                </span>
+              </motion.h1>
+            </motion.div>
             
-            {/* Futuristic tagline */}
+            {/* Professional tagline */}
             <motion.p 
-              className="text-xl md:text-3xl text-cyan-300 mb-4 font-light tracking-wider"
+              className="text-xl md:text-3xl text-[#167dc1] mb-4 font-light tracking-wider"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3, duration: 1 }}
             >
-              NEXT-GEN IT SOLUTIONS
+              PROFESSIONAL IT SOLUTIONS
             </motion.p>
             
             <motion.h2
-              className="text-3xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-green-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent"
+              className="text-3xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-[#167dc1] to-[#0f4a7a] bg-clip-text text-transparent"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
             >
-              POWERED BY AI & INNOVATION
+              EMPOWERING YOUR DIGITAL SUCCESS
             </motion.h2>
             
             <motion.p
-              className="text-lg md:text-xl text-slate-300 mb-12 max-w-3xl mx-auto font-light leading-relaxed"
+              className="text-lg md:text-xl text-gray-600 mb-12 max-w-3xl mx-auto font-light leading-relaxed"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 1 }}
             >
-              Experience the future of digital transformation with our quantum-powered solutions, 
-              AI-driven development, and immersive technologies that redefine what's possible in 2030.
+              Transform your business with our comprehensive IT solutions. From web development to mobile apps, 
+              we deliver innovative technology solutions that drive growth and success.
             </motion.p>
             
-            {/* Futuristic CTA buttons */}
+            {/* Modern CTA buttons */}
             <motion.div
               className="flex flex-col sm:flex-row gap-6 justify-center"
               initial={{ opacity: 0, y: 30 }}
@@ -133,23 +148,20 @@ export default function Home() {
             >
               <Link href="/services">
                 <motion.button
-                  whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(0, 255, 136, 0.5)" }}
+                  whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -3px rgba(59, 130, 246, 0.3)" }}
                   whileTap={{ scale: 0.95 }}
-                  className="relative bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-10 py-4 rounded-full text-lg font-semibold overflow-hidden group"
+                  className="relative bg-gradient-to-r from-[#167dc1] to-[#125a91] text-white px-10 py-4 rounded-full text-lg font-semibold overflow-hidden hover:from-[#125a91] hover:to-[#0f4a7a] transition-all duration-300"
                 >
-                  <span className="relative z-10">EXPLORE SOLUTIONS</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute inset-0 bg-cyan-400 opacity-20 animate-pulse" />
+                  <span className="relative z-10">EXPLORE SERVICES</span>
                 </motion.button>
               </Link>
               <Link href="/projects">
                 <motion.button
-                  whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(0, 136, 255, 0.5)" }}
+                  whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -3px rgba(59, 130, 246, 0.2)" }}
                   whileTap={{ scale: 0.95 }}
-                  className="relative border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group"
+                  className="relative border-2 border-[#167dc1] text-[#167dc1] px-10 py-4 rounded-full text-lg font-semibold hover:bg-[#167dc1] hover:text-white transition-all duration-300"
                 >
                   <span className="relative z-10">VIEW PROJECTS</span>
-                  <div className="absolute inset-0 bg-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </motion.button>
               </Link>
             </motion.div>
@@ -157,15 +169,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Futuristic Services Section */}
-      <section className="py-20 bg-slate-900 transition-colors duration-300 relative overflow-hidden">
-        {/* Holographic grid background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/20 to-blue-900/20"></div>
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(0, 255, 136, 0.15) 1px, transparent 0)`,
-          backgroundSize: '40px 40px'
-        }}></div>
-        
+      {/* Modern Services Section */}
+      <section className="py-20 bg-gray-50 transition-colors duration-300 relative overflow-hidden">
+        <div className="absolute inset-0 circuit-pattern opacity-70"></div>
+        <div className="absolute inset-0 hex-pattern opacity-40"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -173,11 +180,11 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              QUANTUM SERVICES
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#167dc1] to-[#0f4a7a] bg-clip-text text-transparent">
+              OUR SERVICES
             </h2>
-            <p className="text-xl text-cyan-300 max-w-3xl mx-auto font-light">
-              Advanced AI-powered solutions designed for the digital future
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
+              Comprehensive IT solutions designed to drive your business forward
             </p>
           </motion.div>
 
@@ -189,23 +196,19 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
-                className="relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300 group overflow-hidden"
+                className="relative bg-white rounded-2xl p-8 border border-gray-200 hover:border-blue-300 transition-all duration-300 group overflow-hidden modern-card shadow-sm hover:shadow-lg"
               >
-                {/* Holographic glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.gradient} flex items-center justify-center mb-6 relative z-10`}>
                   <service.icon className="w-8 h-8 text-white" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/50 to-blue-500/50 rounded-2xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-cyan-100 relative z-10">{service.title}</h3>
-                <p className="text-slate-300 mb-6 relative z-10">{service.description}</p>
+                <h3 className="text-2xl font-bold mb-4 text-gray-900 relative z-10">{service.title}</h3>
+                <p className="text-gray-600 mb-6 relative z-10">{service.description}</p>
                 <Link href={`/services/${service.title.toLowerCase().replace(' ', '-')}`}>
                   <motion.button
                     whileHover={{ x: 5 }}
-                    className="text-cyan-400 font-semibold flex items-center space-x-2 hover:text-cyan-300 transition-colors relative z-10"
+                    className="text-[#167dc1] font-semibold flex items-center space-x-2 hover:text-[#125a91] transition-colors relative z-10"
                   >
-                    <span>EXPLORE</span>
+                    <span>Learn More</span>
                     <ArrowRight className="w-4 h-4" />
                   </motion.button>
                 </Link>
@@ -216,7 +219,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="py-20 bg-gradient-to-r from-[#167dc1] to-[#125a91]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -239,15 +242,16 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50 transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-white transition-colors duration-300 relative decorative-shapes">
+        <div className="absolute inset-0 geometric-pattern opacity-50"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#167dc1] to-[#0f4a7a] bg-clip-text text-transparent">
               What Our Clients Say
             </h2>
             <p className="text-xl text-gray-600">
@@ -262,7 +266,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 transition-colors duration-300"
+                className="bg-gray-50 rounded-2xl p-8 shadow-lg border border-gray-100 transition-colors duration-300 modern-card"
               >
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -281,7 +285,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 transition-colors duration-300">
+      <section className="py-20 bg-gradient-to-r from-[#167dc1] to-[#125a91] transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -291,7 +295,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
               Let&apos;s discuss your project and bring your digital vision to life. 
               Contact us today for a free consultation.
             </p>
@@ -300,7 +304,7 @@ export default function Home() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-shadow duration-300 inline-flex items-center space-x-2"
+                className="bg-white text-[#167dc1] px-12 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-shadow duration-300 inline-flex items-center space-x-2 hover:bg-blue-50"
               >
                 <span>Start Your Project</span>
                 <ArrowRight className="w-5 h-5" />

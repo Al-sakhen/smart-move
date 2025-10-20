@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
@@ -47,8 +48,20 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-gray-900 text-white relative overflow-hidden">
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(45deg, rgba(59, 130, 246, 0.15) 25%, transparent 25%),
+            linear-gradient(-45deg, rgba(59, 130, 246, 0.15) 25%, transparent 25%),
+            linear-gradient(45deg, transparent 75%, rgba(59, 130, 246, 0.15) 75%),
+            linear-gradient(-45deg, transparent 75%, rgba(59, 130, 246, 0.15) 75%)
+          `,
+          backgroundSize: '80px 80px',
+          backgroundPosition: '0 0, 0 40px, 40px -40px, -40px 0px'
+        }}></div>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
@@ -57,9 +70,18 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
-                Smart Move
-              </h3>
+              <div className="flex items-center space-x-3 mb-4">
+                <Image
+                  src="/smart-move-logo.svg"
+                  alt="Smart Move Logo"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 filter brightness-0 invert"
+                />
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-[#167dc1] to-[#125a91] bg-clip-text text-transparent">
+                  Smart Move
+                </h3>
+              </div>
               <p className="text-gray-300 mb-6 max-w-md">
                 Your trusted partner for comprehensive IT solutions. We specialize in web development, 
                 mobile applications, business solutions, design, and digital marketing.
@@ -68,15 +90,15 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-blue-400" />
-                  <span className="text-gray-300">123 Business Street, Tech City, TC 12345</span>
+                  <span className="text-gray-300">Amman, Jordan</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-blue-400" />
-                  <span className="text-gray-300">+1 (555) 123-4567</span>
+                  <span className="text-gray-300">+962 XX XXX XXXX</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-blue-400" />
-                  <span className="text-gray-300">info@smartmove.com</span>
+                  <span className="text-gray-300">info@smartmove.jo</span>
                 </div>
               </div>
             </motion.div>

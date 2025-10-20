@@ -55,13 +55,13 @@ export default function MobileDevelopment() {
       name: 'React Native', 
       description: 'Cross-platform apps with native performance',
       icon: '⚛️',
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-[#167dc1] to-cyan-500'
     },
     { 
       name: 'Flutter', 
       description: 'Beautiful, natively compiled applications',
       icon: '🎯',
-      color: 'from-blue-400 to-blue-600'
+      color: 'from-[#167dc1] to-[#125a91]'
     }
   ];
 

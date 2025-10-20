@@ -2,7 +2,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ThreeBackground from "@/components/ThreeBackground";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,15 +16,17 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Smart Move - IT Solutions Company",
   description: "Smart Move provides comprehensive IT solutions including web development, mobile applications, business solutions, designs, social media and marketing services.",
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-900 text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900`}
       >
-        <ThreeBackground />
         <Navigation />
         <main>
           {children}
