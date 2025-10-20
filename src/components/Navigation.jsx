@@ -42,7 +42,7 @@ const Navigation = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-300 ${
         isScrolled 
           ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-blue-200' 
           : 'bg-white/90 backdrop-blur-sm'
@@ -52,9 +52,9 @@ const Navigation = () => {
       } : {}}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 sm:h-18">
           {/* Logo with Icon */}
-          <Link href="/" className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center space-x-2 sm:space-x-3">
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="relative"
@@ -64,12 +64,12 @@ const Navigation = () => {
                 alt="Smart Move Logo"
                 width={40}
                 height={40}
-                className="w-10 h-10"
+                className="w-8 h-8 sm:w-10 sm:h-10"
               />
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-2xl font-bold bg-gradient-to-r from-[#167dc1] to-[#0f4a7a] bg-clip-text text-transparent"
+              className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-[#167dc1] to-[#0f4a7a] bg-clip-text text-transparent"
             >
               SMART MOVE
             </motion.div>
@@ -155,7 +155,7 @@ const Navigation = () => {
             opacity: isOpen ? 1 : 0, 
             height: isOpen ? 'auto' : 0 
           }}
-          className="md:hidden overflow-hidden bg-white rounded-lg shadow-lg mt-2 border border-blue-200"
+          className="md:hidden overflow-hidden bg-white rounded-lg shadow-lg mt-2 border border-blue-200 absolute top-full left-4 right-4 z-50 max-h-screen"
         >
           <div className="py-2">
             {navItems.map((item) => (

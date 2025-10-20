@@ -70,7 +70,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white transition-colors duration-300">
       {/* Modern Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden tech-bg-animated floating-elements">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden tech-bg-animated floating-elements pt-20 sm:pt-16">
         <div className="absolute inset-0 tech-grid-bg opacity-60"></div>
         <div className="absolute inset-0 tech-lines opacity-30"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -95,11 +95,11 @@ export default function Home() {
                   alt="Smart Move Logo"
                   width={120}
                   height={120}
-                  className="w-24 h-24 md:w-30 md:h-30"
+                  className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-30 lg:h-30"
                 />
               </motion.div>
               <motion.h1 
-                className="text-6xl md:text-8xl font-bold relative"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold relative"
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1.5, type: "spring", delay: 0.2 }}
@@ -112,7 +112,7 @@ export default function Home() {
             
             {/* Professional tagline */}
             <motion.p 
-              className="text-xl md:text-3xl text-[#167dc1] mb-4 font-light tracking-wider"
+              className="text-sm sm:text-lg md:text-xl lg:text-3xl text-[#167dc1] mb-4 font-light tracking-wider"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3, duration: 1 }}
@@ -121,7 +121,7 @@ export default function Home() {
             </motion.p>
             
             <motion.h2
-              className="text-3xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-[#167dc1] to-[#0f4a7a] bg-clip-text text-transparent"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-[#167dc1] to-[#0f4a7a] bg-clip-text text-transparent"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
@@ -130,7 +130,7 @@ export default function Home() {
             </motion.h2>
             
             <motion.p
-              className="text-lg md:text-xl text-gray-600 mb-12 max-w-3xl mx-auto font-light leading-relaxed"
+              className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 mb-8 sm:mb-12 max-w-3xl mx-auto font-light leading-relaxed px-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 1 }}
